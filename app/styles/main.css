@@ -1,0 +1,14 @@
+.side-bar {
+  color: #01FF70;
+  background-color: #001f3f;
+  border: 1px solid black;
+  font-family: 'Roboto', sans-serif;
+  width: 250px;
+  text-align: right;
+  padding-right: 10px;
+  position: absolute;
+  float: left;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
