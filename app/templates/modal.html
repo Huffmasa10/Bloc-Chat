@@ -1,0 +1,17 @@
+<section class="content">
+  <div class="header">
+    <button class="cancel" type="button" ng-click="cancelRoom()">X</button>
+    <h4 class = "title">Room Name</h4>
+  </div>
+  <div class="modal-body">
+    <form class="create-room" ng-submit="createRoom(room)">
+      <input type="text" ng-model="room" placeholder="Please Name New Room">
+      <button>Create Room</button>
+    </form>
+  </div>
+  <div class ="modal-footer">
+    <form class="cancel-room" ng-click="cancelRoom()">
+      <button>Cancel</button>
+    </form>
+  </div>
+</section>
