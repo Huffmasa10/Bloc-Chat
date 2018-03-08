@@ -1,8 +1,8 @@
 <section class="side-bar">
   <h1><strong>Bloc Chat</strong></h1>
-  <h5>Chat Rooms:</h5>
-  <button id="newButton" type="button" class="btn-primary" ng-click="addRoomModal()">Create Room</button>
+  <button id="newButton" type="button" class="btn btn-primary btn-large" ng-click="addRoomModal()">Create New Room</button>
     <section class="chat-rooms">
+      <h4>Available Chat Rooms:</h4>
       <div class="rooms-container" ng-repeat="room in roomList">
         <p class="room-name">{{ room.$value }}</p>
       </div>

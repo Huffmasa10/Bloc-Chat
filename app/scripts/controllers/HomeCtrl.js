@@ -5,8 +5,9 @@
 
 
     $scope.addRoomModal = function() {
+      console.log("Called!");
       $uibModal.open({
-          templateUrl: "/app/templates/modal.html",
+          templateUrl: "/templates/modal.html",
           controller: "ModalCtrl",
           size: "sm",
           animation: "true"

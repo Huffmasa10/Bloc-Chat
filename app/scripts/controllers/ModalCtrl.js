@@ -2,8 +2,8 @@
   function ModalCtrl($scope, Room, $uibModalInstance) {
 
 
-    $scope.createRoom = function() {
-      Room.add(Room.newRoom);
+    $scope.createRoom = function(room) {
+      Room.add(room);
       $uibModalInstance.close();
     };
 
