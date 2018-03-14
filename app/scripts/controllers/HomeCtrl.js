@@ -1,8 +1,14 @@
 (function() {
-  function HomeCtrl($scope, Room, $uibModal) {
-    console.log("Home Controller linked");
+  function HomeCtrl($scope, Room, $uibModal, Message) {
     $scope.roomList = Room.all;
+    $scope.messages = {};
+    $scope.currentRoom = null;
 
+    $scope.setCurrentRoom = function(room) {
+      console.log("room clicked!");
+      $scope.currentRoom = room;
+      $scope.messages = Message.getByRoomId(room.$id);
+    };
 
     $scope.addRoomModal = function() {
       console.log("Called!");
@@ -17,5 +23,5 @@
 
   angular
       .module("bloc-chat-seth")
-      .controller("HomeCtrl", ["$scope","Room", "$uibModal", HomeCtrl]);
+      .controller("HomeCtrl", ["$scope","Room", "$uibModal", "Message", HomeCtrl]);
 })();

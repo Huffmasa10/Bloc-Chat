@@ -5,7 +5,7 @@
   font-family: 'Merriweather', serif;
   width: 300px;
   text-align: left;
-  padding-left: 10px;
+  padding-left: 20px;
   position: absolute;
   float: left;
   top: 0;
@@ -13,8 +13,49 @@
   left: 0;
 }
 
+.rooms-container:hover {
+  color: yellow;
+  cursor: default;
+
+}
+
+.current-room {
+  padding-top: 15px;
+  padding-left: 300px;
+  width: 100%;
+  position: relative;
+  font-family: 'Merriweather', serif;
+}
+
+.chat-name {
+  text-align: center;
+}
+
+.chat-messages {
+  background-color: #e2eaf5;
+}
+
+#content {
+  padding-bottom: 10px;
+  padding-left: 15px;
+  font-weight: 100;
+}
+
+#username {
+  padding-top: 10px;
+  padding-left: 15px;
+  font-weight: 1200;
+}
+
+#message-time {
+  color: #9d9d9d;
+  font-style: italic;
+  font-weight: 100;
+  padding-left: 1000px;
+}
 
 
+//modal styling
 .modal-title {
   color: black;
   font-family: 'Merriweather', serif;
@@ -40,11 +81,11 @@
  }
 
 #newButton {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 h1 {
-  padding-bottom: 75px;
+  padding-bottom: 25px;
 }
 
 h5 {

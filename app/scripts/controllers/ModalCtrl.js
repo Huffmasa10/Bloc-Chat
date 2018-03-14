@@ -8,7 +8,7 @@
     };
 
     $scope.cancelRoom = function() {
-      $uibModalInstance.dismiss();
+      $uibModalInstance.close();
     };
 
     }
