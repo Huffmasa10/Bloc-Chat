@@ -11,7 +11,12 @@
     <h2>{{ currentRoom.$value }}</h2>
   </div>
   <div class="chat-messages" ng-repeat="message in messages">
-    <p id="username"> {{ message.username }} <span id="message-time"> {{ message.sentAt }} </span></p>
+    <p id="username"> {{ message.username }}: <span id="message-time"> {{ message.sentAt | date: "MMM dd y, hh:mm a"}} </span></p>
     <p id="content">{{ message.content }}</p>
   </div>
+</section>
+
+<section class="home-footer">
+  <p>Hello, <span>{{currentUser}}</span></p>
+  <button class="btn btn-danger" ng-click="logOut()">Log Out</button>
 </section>

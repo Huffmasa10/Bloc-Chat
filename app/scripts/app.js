@@ -16,6 +16,6 @@
 
 
   angular
-      .module("bloc-chat-seth", ["ui.router", "firebase", "ui.bootstrap"])
+      .module("bloc-chat-seth", ["ui.router", "firebase", "ui.bootstrap", "ngCookies"])
       .config(config);
 }) ();
