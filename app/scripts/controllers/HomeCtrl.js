@@ -11,11 +11,16 @@
       $scope.messages = Message.getByRoomId(room.$id);
     };
 
+    $scope.sendMessage = function(room) {
+      Message.send($scope.newMessage, room.$id);
+      $scope.newMessage = null;
+    };
+
     $scope.logOut = function() {
       console.log("Successfully logged out");
       $cookies.remove("blocChatCurrentUser");
       window.location.reload();
-    }
+    };
 
     $scope.addRoomModal = function() {
       console.log("Called!");

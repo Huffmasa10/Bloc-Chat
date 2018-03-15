@@ -1,9 +1,15 @@
 <section class="side-bar">
-  <h1><strong>Bloc Chat</strong></h1>
-  <button id="newButton" type="button" class="btn btn-primary btn-large" ng-click="addRoomModal()">Create New Room</button>
+  <div class="title-button">
+      <h1><strong>Bloc Chat</strong></h1>
+      <button id="newButton" type="button" class="btn btn-primary btn-large" ng-click="addRoomModal()">Create New Room</button>
+  </div>
   <div class="rooms-container" ng-repeat="room in roomList" ng-click="setCurrentRoom(room)">
       <h3> {{ room.$value }} </h3>
-  </div>
+ </div>
+ 
+ <div class="home-footer">
+  <p>Hello, <span style="color:#4ae609">{{currentUser}}</span></p>
+  <button class="btn btn-danger" ng-click="logOut()">Log Out</button>
 </section>
 
 <section class="current-room">
@@ -11,12 +17,14 @@
     <h2>{{ currentRoom.$value }}</h2>
   </div>
   <div class="chat-messages" ng-repeat="message in messages">
-    <p id="username"> {{ message.username }}: <span id="message-time"> {{ message.sentAt | date: "MMM dd y, hh:mm a"}} </span></p>
-    <p id="content">{{ message.content }}</p>
+    <p id="message-time">{{ message.sentAt | date: "MMM dd y, hh:mm a"}}</p>
+    <p> <span id="username"> {{ message.username }}: </span> {{ message.content }}</p>
   </div>
-</section>
 
-<section class="home-footer">
-  <p>Hello, <span>{{currentUser}}</span></p>
-  <button class="btn btn-danger" ng-click="logOut()">Log Out</button>
+  <div class="new-message">
+    <div class = "message-box-button">
+      <input type="text" class="message-box" ng-model="newMessage" placeholder="Type your message here!">
+      <button class="message-button" ng-click="sendMessage(currentRoom)">Send</button>
+    </div>
+  </div>
 </section>
